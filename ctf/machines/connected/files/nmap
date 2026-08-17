@@ -1,0 +1,95 @@
+nmap -sS -sC -vvv 10.129.245.100
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-10 19:52 -0300
+NSE: Loaded 127 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 19:52
+Completed NSE at 19:52, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 19:52
+Completed NSE at 19:52, 0.00s elapsed
+Initiating Ping Scan at 19:52
+Scanning 10.129.245.100 [4 ports]
+Completed Ping Scan at 19:52, 0.21s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 19:52
+Completed Parallel DNS resolution of 1 host. at 19:52, 0.50s elapsed
+DNS resolution of 1 IPs took 0.50s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating SYN Stealth Scan at 19:52
+Scanning 10.129.245.100 [1000 ports]
+Discovered open port 443/tcp on 10.129.245.100
+Discovered open port 22/tcp on 10.129.245.100
+Discovered open port 80/tcp on 10.129.245.100
+Completed SYN Stealth Scan at 19:52, 17.32s elapsed (1000 total ports)
+NSE: Script scanning 10.129.245.100.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 19:52
+NSE Timing: About 99.72% done; ETC: 19:53 (0:00:00 remaining)
+Completed NSE at 19:53, 36.43s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 19:53
+Completed NSE at 19:53, 0.00s elapsed
+Nmap scan report for 10.129.245.100
+Host is up, received echo-reply ttl 63 (0.24s latency).
+Scanned at 2026-07-10 19:52:11 -03 for 54s
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE REASON
+22/tcp  open  ssh     syn-ack ttl 63
+| ssh-hostkey:
+|   2048 4e:60:38:6f:e7:78:6c:ca:58:62:a1:f1:56:ae:8d:30 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZBL8VwwAo5nMO8NKi+tOD98pIamOTde7sVlAJmP1Lp5urgs8hzvYIVElaEWZdxjHZM5hggtGg8Tmqzn2tOeNsN3rh/JTcXCjtc2izUuwLb18s5GgMHkBooT6UBCdcztPySFILnedHcFusfxSPTVTSIrwGaxLKULJ/qn2ClQ6BBp60NqQg0Da93fbm/5NS6OtZYdWdfcW4oyN/LWQcfFo/OYFjzWng+1pU+gfeuWic4iW2eg9qmWq43Och4oNJ3VAYh8MpXaKuoaDi+J7R6f60ADTQ6Kg/oSHKj8RV0zySax8qHt+Q2987wcdXuCnI+6oREQIUHu1s3z+rmnT2k4Mx
+|   256 12:41:55:26:9d:ad:3d:e8:bf:4e:31:aa:d7:d1:a5:d2 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH4ZlpWhdGD2bgi63EUvvzRx/sv8EvmVBLOFPVarhdPQcqCL69SyCtU0JLlNqdLxKGUbh5t1/9BvGU7+cXZdt1E=
+|   256 8e:b6:96:e0:21:83:5d:1d:ce:8d:e2:6a:dd:38:c6:75 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB5pB+WpL08kZ9YCgPA7QRnKjCsHY/R9oNeUQF1LD5Ms
+80/tcp  open  http    syn-ack ttl 63
+| http-methods:
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to http://connected.htb/
+443/tcp open  https   syn-ack ttl 63
+|_http-title: 400 Bad Request
+| ssl-cert: Subject: commonName=pbxconnect/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/localityName=SomeCity/organizationalUnitName=SomeOrganizationalUnit/emailAddress=root@pbxconnect
+| Issuer: commonName=pbxconnect/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/localityName=SomeCity/organizationalUnitName=SomeOrganizationalUnit/emailAddress=root@pbxconnect
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-11-30T14:07:27
+| Not valid after:  2026-11-30T14:07:27
+| MD5:     2530 86e8 e962 6d48 36f8 e524 bf79 cc5a
+| SHA-1:   6997 e786 d78e 2d0a dcb4 f449 7f65 ba12 52ef 0466
+| SHA-256: 46b9 6671 74f5 9939 af02 a812 993c a389 bf84 c67a de5e 94b1 6c01 43d3 fac9 b666
+| -----BEGIN CERTIFICATE-----
+| MIID4jCCAsqgAwIBAgICAOgwDQYJKoZIhvcNAQELBQAwgaUxCzAJBgNVBAYTAi0t
+| MRIwEAYDVQQIDAlTb21lU3RhdGUxETAPBgNVBAcMCFNvbWVDaXR5MRkwFwYDVQQK
+| DBBTb21lT3JnYW5pemF0aW9uMR8wHQYDVQQLDBZTb21lT3JnYW5pemF0aW9uYWxV
+| bml0MRMwEQYDVQQDDApwYnhjb25uZWN0MR4wHAYJKoZIhvcNAQkBFg9yb290QHBi
+| eGNvbm5lY3QwHhcNMjUxMTMwMTQwNzI3WhcNMjYxMTMwMTQwNzI3WjCBpTELMAkG
+| A1UEBhMCLS0xEjAQBgNVBAgMCVNvbWVTdGF0ZTERMA8GA1UEBwwIU29tZUNpdHkx
+| GTAXBgNVBAoMEFNvbWVPcmdhbml6YXRpb24xHzAdBgNVBAsMFlNvbWVPcmdhbml6
+| YXRpb25hbFVuaXQxEzARBgNVBAMMCnBieGNvbm5lY3QxHjAcBgkqhkiG9w0BCQEW
+| D3Jvb3RAcGJ4Y29ubmVjdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+| ALHeypjH6abbs3T5INa8PZP8w90Xjj0PJ68myliRayEhZKmQL/FbL+9XLIaRGxMI
+| 3fXLvn0Sw2AfDWWpkFEMckSokGZK2MTp4CYooo4DvNIiggms4xZ2aLY35zsU45II
+| EzVB6OAtd8imI6h/D/YEaOvFQFPtXb9gzB0edJP55gjkCIYAt95oLAZLbUa5u0r9
+| OhjBPuqVQE0f6oqsZh/1UnZcsscDw51r7jKGx2+uSpVb6dxMM9y2XX/XC26g4VbA
+| noHrbagpbisbDwGIhQU19znUT2iYVpNBV3I9ehiVB7FFC7+cT8LIgpJ+KtXM/cjg
+| dsxJ+sVzuB02MCS6ly0PbjMCAwEAAaMaMBgwCQYDVR0TBAIwADALBgNVHQ8EBAMC
+| BeAwDQYJKoZIhvcNAQELBQADggEBAHdARF+ZdnUhYCaB5lowDM1sxWS9F8kkECOh
+| 3D/d/LeJ7c6RRR0Ktmw6/4zRCW1bDUkjtdz4idYRYGyivkYobhX3NvhV5ghslMw3
+| UDjGexJToW7Qk5YNSIeKkfR89Tg2DkJzlUs4b1DT+ZaGgCto7x8mrzXcT0ktDyK1
+| nHqmiKXuVFtwLpnJxXArPkhiH7TYgGaeUZw8U6z7EUBtgnn8BESAB+LQ2n4OQnbE
+| lJS2230sbxaxiOpt83EN97CnusGePjqpiUXxPJVc0LA5U7mZiqhojAFWRSOMax7l
+| yzYI6PipGEKHexXmy4DTfm/n0xR4HRITygOgW28l6qiXtAME9hw=
+|_-----END CERTIFICATE-----
+| http-methods:
+|_  Supported Methods: GET HEAD POST
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 19:53
+Completed NSE at 19:53, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 19:53
+Completed NSE at 19:53, 0.00s elapsed
+Read data files from: /usr/share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 54.85 seconds
+           Raw packets sent: 2011 (88.460KB) | Rcvd: 14 (600B)

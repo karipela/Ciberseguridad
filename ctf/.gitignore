@@ -1,0 +1,19 @@
+# Docker files (lab environment)
+Dockerfile
+build-docker.sh
+
+# Flags
+flag.txt
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,75 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-06-23 17:58 -0300
+Nmap scan report for 10.129.245.214
+Host is up (0.18s latency).
+
+PORT     STATE SERVICE VERSION
+3000/tcp open  ppp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding
+|     x-nextjs-cache: HIT
+|     x-nextjs-prerender: 1
+|     x-nextjs-stale-time: 4294967294
+|     X-Powered-By: Next.js
+|     Cache-Control: s-maxage=31536000, 
+|     ETag: "p02u6gnhufd8t"
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 17175
+|     Date: Tue, 23 Jun 2026 20:58:51 GMT
+|     Connection: close
+|     <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/414e1be982bc8557.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-db0a529a99835594.js"/><script src="/_next/static/chunks/4bd1b696-80bcaf75e1b4285e.js" async=""></script><script src="/_next/static/chunks/517-d083b552e04dead1.js" async=""></script><script s
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch
+|     Allow: GET
+|     Allow: HEAD
+|     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+|     Date: Tue, 23 Jun 2026 20:58:54 GMT
+|     Connection: close
+|   Help, NCP, RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch
+|     Allow: GET
+|     Allow: HEAD
+|     Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+|     Date: Tue, 23 Jun 2026 20:58:55 GMT
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.99%I=7%D=6/23%Time=6A3AF38B%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,2EE6,"HTTP/1\.1\x20200\x20OK\r\nVary:\x20RSC,\x20Next-Router-S
+SF:tate-Tree,\x20Next-Router-Prefetch,\x20Next-Router-Segment-Prefetch,\x2
+SF:0Accept-Encoding\r\nx-nextjs-cache:\x20HIT\r\nx-nextjs-prerender:\x201\
+SF:r\nx-nextjs-stale-time:\x204294967294\r\nX-Powered-By:\x20Next\.js\r\nC
+SF:ache-Control:\x20s-maxage=31536000,\x20\r\nETag:\x20\"p02u6gnhufd8t\"\r
+SF:\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2017
+SF:175\r\nDate:\x20Tue,\x2023\x20Jun\x202026\x2020:58:51\x20GMT\r\nConnect
+SF:ion:\x20close\r\n\r\n<!DOCTYPE\x20html><html\x20lang=\"en\"><head><meta
+SF:\x20charSet=\"utf-8\"/><meta\x20name=\"viewport\"\x20content=\"width=de
+SF:vice-width,\x20initial-scale=1\"/><link\x20rel=\"stylesheet\"\x20href=\
+SF:"/_next/static/css/414e1be982bc8557\.css\"\x20data-precedence=\"next\"/
+SF:><link\x20rel=\"preload\"\x20as=\"script\"\x20fetchPriority=\"low\"\x20
+SF:href=\"/_next/static/chunks/webpack-db0a529a99835594\.js\"/><script\x20
+SF:src=\"/_next/static/chunks/4bd1b696-80bcaf75e1b4285e\.js\"\x20async=\"\
+SF:"></script><script\x20src=\"/_next/static/chunks/517-d083b552e04dead1\.
+SF:js\"\x20async=\"\"></script><script\x20s")%r(Help,2F,"HTTP/1\.1\x20400\
+SF:x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptio
+SF:ns,10C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nvary:\x20RSC,\x20Next-Rou
+SF:ter-State-Tree,\x20Next-Router-Prefetch,\x20Next-Router-Segment-Prefetc
+SF:h\r\nAllow:\x20GET\r\nAllow:\x20HEAD\r\nCache-Control:\x20private,\x20n
+SF:o-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r\nDate:\x20Tue,
+SF:\x2023\x20Jun\x202026\x2020:58:54\x20GMT\r\nConnection:\x20close\r\n\r\
+SF:n")%r(RTSPRequest,10C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nvary:\x20R
+SF:SC,\x20Next-Router-State-Tree,\x20Next-Router-Prefetch,\x20Next-Router-
+SF:Segment-Prefetch\r\nAllow:\x20GET\r\nAllow:\x20HEAD\r\nCache-Control:\x
+SF:20private,\x20no-cache,\x20no-store,\x20max-age=0,\x20must-revalidate\r
+SF:\nDate:\x20Tue,\x2023\x20Jun\x202026\x2020:58:55\x20GMT\r\nConnection:\
+SF:x20close\r\n\r\n")%r(RPCCheck,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nConnection:\x20close\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 44.63 seconds
